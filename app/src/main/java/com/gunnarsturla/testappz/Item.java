@@ -15,7 +15,8 @@ public class Item {
 	private String	name,			// nafn
 					description,	// Textalýsing
 					ingredients,	// innihaldsefni
-					imghash;		// Einstakt hash fyrir þessar myndir,
+					imghash,		// Einstakt hash fyrir þessar myndir,
+					comment;
 	// sem breytist ef myndirnar eru uppfærðar
 	private Vector<String> allergens;  // Vector sem heldur utan um ofnæmisvalda
 	private Vector<String> filterable; // Vector sem heldur utan um síanlega hluti, eins og vegetarian, ofl.
@@ -30,6 +31,7 @@ public class Item {
 		this.ingredients= ingredients;	// innihaldsefni
 		this.imghash	= imghash;		// Einstakt hash fyrir þessar myndir,
 										// sem breytist ef myndirnar eru uppfærðar
+		this.comment="";
 		allergens =  new Vector<String>();
 		filterable = new Vector<String>();
 	}

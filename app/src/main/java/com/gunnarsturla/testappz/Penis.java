@@ -18,7 +18,7 @@ public class Penis extends Activity
 
         implements NavigationDrawerFragment.NavigationDrawerCallbacks {
 
-	private Vector<SubMenu> wm;
+	protected Vector<SubMenu> wm;
 	private SubMenu order;
     /**
      * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
@@ -143,5 +143,5 @@ public class Penis extends Activity
                     getArguments().getInt(ARG_SECTION_NUMBER));
         }
     }
-
+	public Vector<SubMenu> getWm() { return wm; }
 }
