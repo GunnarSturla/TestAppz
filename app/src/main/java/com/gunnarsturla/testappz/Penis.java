@@ -32,6 +32,9 @@ public class Penis extends Activity
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+		wm = keyraMenu.build();
+		order = new SubMenu();
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_penis);
 
@@ -42,14 +45,12 @@ public class Penis extends Activity
         // Set up the drawer.
         mNavigationDrawerFragment.setUp(
                 R.id.navigation_drawer,
-                (DrawerLayout) findViewById(R.id.drawer_layout));
+                (DrawerLayout) findViewById(R.id.drawer_layout), wm);
 
 		//Hér þarf að kalla á W8rMenuBuilder(), sem setur menuinn inn í W8rMenuið wm.
 		//menuParser = new XMLParser();
 		//menuParser.parseXML();
 
-		wm = keyraMenu.build();
-		order = new SubMenu();
 
 		//menuList = (ExpandableListView) findViewById(R.id.matsedillExpandable);
 		//menuList.setAdapter(new MenuAdapter(this, wm, order));
